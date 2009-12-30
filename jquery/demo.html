@@ -4,51 +4,51 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>TextMorph Demo</title>
 <script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
-<script type="text/javascript" src="http://github.com/nicodmf/TextMorph/raw/master/Source/jquery.TextMorph.js"
+<script type="text/javascript" src="TextMorph/master/Source/jquery.TextMorph.js"
 	language="javascript"></script>
 <script type="text/javascript">
-window.addEvent('domready', function() {
-	var circle = new Fx.TextMorph($('circle'),{
+$(document).ready(function(){
+	var circle = new TextMorph(document.getElementById('circle'),{
 		width: 600,
 		height: 600,
 		lineHeight:15
 	});
-	var fir = new Fx.TextMorph($('fir'),{
+	var fir = new TextMorph(document.getElementById('fir'),{
 			draw:'fir',
 			width: 600,
 			height: 600,
 			backgroundcolor: 'white'
 	});
-	var diamond = new Fx.TextMorph($('diamond'),{
+	var diamond = new TextMorph(document.getElementById('diamond'),{
 			draw:'diamond'
 	});
-	var trapeze = new Fx.TextMorph($('trapeze'),{
+	var trapeze = new TextMorph(document.getElementById('trapeze'),{
 			draw:'trapeze'
 	});
-	var triangletop = new Fx.TextMorph($('triangletop'),{
+	var triangletop = new TextMorph(document.getElementById('triangletop'),{
 			draw:'triangletop'
 	});
-	var trianglebottom = new Fx.TextMorph($('trianglebottom'),{
+	var trianglebottom = new TextMorph(document.getElementById('trianglebottom'),{
 			draw:'trianglebottom'
 	});
-	var userfunctions = new Fx.TextMorph($('userfunctions'),{
-			debug:true,
-			functionLeft : function(pos){
-					var y=(this.height-pos)/this.height
-					return (Math.sin((1-y)*8)+1)*this.width/4;
+	var userfunctions = new TextMorph(document.getElementById('userfunctions'),{
+			debug:false,
+			functionLeft : function(obj){
+					var y=(obj.height-obj.y)/obj.height
+					return (Math.sin((1-y)*8)+1)*obj.width/4;
 				},
-			functionRight : function(pos){
-					var y=(this.height-pos)/this.height
-					return (1-y)*this.width/4;
+			functionRight : function(obj){
+					var y=(obj.height-obj.y)/obj.height
+					return (1-y)*obj.width/4;
 				}
 			
 
 	});
-	var userfunctions2 = new Fx.TextMorph($('userfunctions2'),{
-			debug:true,
-			functions : function(pos){
-					var y=(this.height-pos)/this.height
-					return (Math.sin((1-y)*8)+1)*this.width/4;
+	var userfunctions2 = new TextMorph(document.getElementById('userfunctions2'),{
+			backgroundcolor: 'red',
+			functions : function(obj){
+					var y=(obj.height-obj.y)/obj.height
+					return (Math.sin((1-y)*8)+1)*obj.width/4;
 				}
 	});
 });
@@ -70,6 +70,15 @@ div#circle,p#fir, div.test {
 	margin: auto;
 	width: 600px;
 	height: 800px;
+
+}
+div#userfunctions2{
+	font-size: 12px;
+	line-height: 15px;
+	text-align: justify;
+	margin: auto;
+	width: 800px;
+	height: 600px;
 
 }
 </style>
