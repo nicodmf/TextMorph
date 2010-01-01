@@ -8,6 +8,7 @@
   <link rel="stylesheet"  href="ui/styles/style.css" type="text/css" media="all" />
 </head>
 <body>
+<div class="content">
 <div class="lang"><a href="en.html" title="English version">English version</a></div>
 <h1>TextMorph</h1>
 <h2>Pr&eacute;sentation
@@ -19,7 +20,7 @@
 <div class="legende">Fonctionnement du plugin - de la l'aspect initial au r&eacute;sultat final</div></div>
 <p>Deux div sont ainsi ajout&eacute;es sur chaque ligne. L'une flotte à droite, l'autre à gauche. Une div suppl&eacute;mentaire est ajout&eacute; et comporte l'attribut css clear:both afin de permettre d'&eacute;crire la ligne suivante. Le texte est quand à lui inclus dans une div diff&eacute;rente, il est c&eacute;sur&eacute; de mani&egrave;re basique (voir l'expliquation sur les c&eacute;sures), et r&eacute;gl&eacute; avec un margin-top n&eacute;gatif de la taille de la div initial (ou du param&egrave;tre height, si celui-ci est pass&eacute; à la fonction).</p>
 <h2>Disponibilit&eacute;s</h2>
-<p>Ce plugin est diponibles pour les frameworks <a href="http://plugins.jquery.com/project/textmorph">jquery</a> et <a href="http://mootools.net/forge/p/fx_textmorph">mootools</a>.</p>
+<p>Ce plugin est diponibles pour les frameworks <a href="http://plugins.jquery.com/project/textmorph">jquery</a> et <a href="http://mootools.net/forge/p/fx_textmorph">mootools</a>. Les démos sont présentes pour <a href="demos/jquery.html">jquery</a> et pour <a href="demos/mootools.html">mootools</a></p>
 <h2>Les C&eacute;sures</h2>
 
 <p>Les c&eacute;sures sont r&eacute;alis&eacute;es par ce plugin de mani&egrave;re simpliste, elle sont d&eacute;sactivable avec le param&egrave;tre shy. L'int&eacute;rêt &eacute;tant d'ajouter un syst&egrave;me de c&eacute;sure plus puissant javascript ou php. En effet, outre le non suivi des r&egrave;gles de c&eacute;sure communn&eacute;ment admise, chaque langues ayant des r&egrave;gles diff&eacute;rentes qui peuvent s'av&eacute;rer complexes, la fonction r&eacute;alisant les c&eacute;sures oblit&egrave;re toutes les balises int&eacute;gr&eacute;es dans le texte à former.</p>
@@ -32,6 +33,7 @@ new TextMorph(document.getElementById('circle2'),{
 <ul class="menu">
 <li id="menu1"  class="choice"><a href="?p=textmorph">TextMorph</a></li><li id="menu2"  class=""><a href="?p=textmorph"></a></li></ul>
 <div id="pied">
+</div>
 </div>
 </body>
 </html>

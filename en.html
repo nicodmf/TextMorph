@@ -3,22 +3,25 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>TextMorph</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>TextMorph</title>
   <link rel="stylesheet"  href="ui/styles/style.css" type="text/css" media="all" />
 </head>
 <body>
+<div class="content">
 <div class="lang"><a href="index.html" title="Version française">Version française</a></div>
 <h1>TextMorph</h1>
 <h2>Overview</h2>
 <p>TextMorph is a plugin available for mootools and jQuery which can produce forms with text. It is based on the specifications under css css 2.1 (available in <a href="http://www.w3.org/TR/CSS21/">English</a> and <a href="http://www.yoyodesign.org/doc/w3c/css2/cover.html">French</a>).</p>
 <h2>Principle</h2>
-<p>TextDraw relies on two properties present in the css standards, the float and margin-top, combining them so as to show the text along multiple div whose size is calculated for a given predetermined aspect.
-<div class="image"><img src="entrepot/textMorph/schema1.png" alt="Schéma1" width="689" height="246" />
+<p>TextDraw relies on two properties present in the css standards, the float and margin-top, combining them so as to show the text along multiple div whose size is calculated for a given predetermined aspect.</p>
+<div class="image"><img src="entrepot/schema1.png" alt="Schéma1" width="689" height="246" />
 <div class="legende">Fonctionnement du plugin - de la l'aspect initial au résultat final</div></div>
-Two div are added together on each line. One fleet to the right and one left. An extra div is added and contains the attribute css clear: both to help write the next line. The text is still included him in a different div, hyphenation is so basic (see the explanation on the hyphenation), and set a negative margin-top size of the original div (or height parameter, if it is passed to the function).<h2>Disponibilités</h2>
-<p>This plugin is Available for frameworks <a href="http://plugins.jquery.com/project/textmorph">jquery</a> and <a href="http://mootools.net/forge/p/fx_textmorph">mootools</a>.</p>
-<h2>Les Césures</h2>
+<p>
+Two div are added together on each line. One fleet to the right and one left. An extra div is added and contains the attribute css clear: both to help write the next line. The text is still included him in a different div, hyphenation is so basic (see the explanation on the hyphenation), and set a negative margin-top size of the original div (or height parameter, if it is passed to the function).</p>
+<h2>Disponibility</h2>
+<p>This plugin is available for frameworks <a href="http://plugins.jquery.com/project/textmorph">jquery</a> and <a href="http://mootools.net/forge/p/fx_textmorph">mootools</a>. The demos  are <a href="demos/jquery.html">here</a> for jquery and <a href="demos/mootools.html">here</a> for mootools</p>
+<h2>Hyphenations</h2>
 <p>The hyphenation is done by this plugin so simplistic, they are disabled with the parameter shy. The interest is to add a more powerful hyphenation javascript or php. Indeed, apart from not following the rules of hyphenation communnément admitted, each language has different rules which may be complex, making the function hyphenation obliterates all tags embedded in text form.</p>
 <h3>Exemple</h3>
 <pre class="javascript">
@@ -27,8 +30,8 @@ new TextMorph(document.getElementById('circle2'),{
 });
 </pre>
 <ul class="menu">
-<li id="menu1"  class="choice"><a href="?p=textmorph">TextMorph</a></li><li id="menu2"  class=""><a href="?p=textmorph"></a></li></ul>
-<div id="pied">
+<li id="menu1"  class="choice"><a href="?p=textmorph">TextMorph</a></li><li id="menu2"  class=""></li>
+</ul>
 </div>
 </body>
 </html>
