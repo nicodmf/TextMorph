@@ -2,7 +2,7 @@
 /* CSS Document */
 .menu{display:none}
 body{background:black  url(../images/bknd.jpg) top repeat-x; margin-top:0px; margin-bottom:0px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:smaller}
-.content{position:relative; background:white; width:900px; margin:auto; padding:10px 50px 10px 50px; margin-top:0px; margin-bottom:0px}
+.content{position:relative; background:white; width:700px; margin:auto; padding:10px 50px 10px 50px; margin-top:0px; margin-bottom:0px}
 .lang{position:absolute; width:30px; right:5px; top:5px;}
 div.image{text-align:center;}
 .legende{font-style:italic}
