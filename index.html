@@ -1,1 +1,41 @@
-My GitHub Page
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>TextMorph</title>
+    	<link rel="stylesheet"  href="ui/css/styleCommuns.css" type="text/css" media="screen" />
+	<link rel="stylesheet"  href="ui/css/print.css" type="text/css" media="print" />
+	<link rel="stylesheet"  href="ui/css/pagesInt.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="ui/js/mootools-1.2.4-core-nc.js.txt"></script>
+
+    <script type="text/javascript" src="ui/js/javascript.js"></script>
+    </head>
+<body><h1>TextMorph</h1>
+<h2>Présentation
+</h2>
+<p>TextMorph est un plugin disponible pour mootools ainsi que jquery qui permet de réaliser des formes avec un texte. Il se base sur les spécifications css en cours css 2.1 (disponible en version <a href="http://www.w3.org/TR/CSS21/">anglaise</a> et <a href="http://www.yoyodesign.org/doc/w3c/css2/cover.html">française</a>).</p>
+<h2>Principe</h2>
+
+<p>TextDraw s'appuie sur deux propriétés présente dans la normes css, le float et le margin-top, en les combinant de manière a faire apparaitre le texte au bord de multiples div dont la taille est calculée pour donné un aspect prédéterminé.</p>
+<div class="image"><img src="entrepot/textMorph/schema1.png" alt="Schéma1" width="689" height="246" />
+<div class="legende">Fonctionnement du plugin - de la l'aspect initial au résultat final</div></div>
+<p>Deux div sont ainsi ajoutées sur chaque ligne. L'une flotte à droite, l'autre à gauche. Une div supplémentaire est ajouté et comporte l'attribut css clear:both afin de permettre d'écrire la ligne suivante. Le texte est quand à lui inclus dans une div différente, il est césuré de manière basique (voir l'expliquation sur les césures), et réglé avec un margin-top négatif de la taille de la div initial (ou du paramètre height, si celui-ci est passé à la fonction).</p>
+<h2>Disponibilités</h2>
+<p>Ce plugin est diponibles pour les frameworks <a href="http://plugins.jquery.com/project/textmorph">jquery</a> et <a href="http://mootools.net/forge/p/fx_textmorph">mootools</a>.</p>
+<h2>Les Césures</h2>
+
+<p>Les césures sont réalisées par ce plugin de manière simpliste, elle sont désactivable avec le paramètre shy. L'intérêt étant d'ajouter un système de césure plus puissant javascript ou php. En effet, outre le non suivi des règles de césure communnément admise, chaque langues ayant des règles différentes qui peuvent s'avérer complexes, la fonction réalisant les césures oblitère toutes les balises intégrées dans le texte à former.</p>
+<h3>exemple</h3>
+<pre class="javascript">
+new TextMorph(document.getElementById('circle2'),{
+	shy:null
+});
+</pre>
+<ul>
+<li id="menu1"  class="choice"><a href="?p=textmorph">TextMorph</a></li><li id="menu2"  class=""><a href="?p=textmorph"></a></li></ul>
+<div id="pied">
+</div>
+</body>
+</html>
