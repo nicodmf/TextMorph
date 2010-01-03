@@ -1,39 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>TextMorph</title>
-  <link rel="stylesheet"  href="ui/styles/style.css" type="text/css" media="all" />
-</head>
-<body>
-<div class="content">
-<div class="lang"><a href="en.html" title="English version">English version</a></div>
-<h1>TextMorph</h1>
-<h2>Pr&eacute;sentation
-</h2>
-<p>TextMorph est un plugin disponible pour mootools ainsi que jquery qui permet de r&eacute;aliser des formes avec un texte. Il se base sur les sp&eacute;cifications css en cours css 2.1 (disponible en version <a href="http://www.w3.org/TR/CSS21/">anglaise</a> et <a href="http://www.yoyodesign.org/doc/w3c/css2/cover.html">française</a>).</p>
-<h2>Principe</h2>
-<p>TextDraw s'appuie sur deux propri&eacute;t&eacute;s pr&eacute;sente dans la normes css, le float et le margin-top, en les combinant de mani&egrave;re a faire apparaitre le texte au bord de multiples div dont la taille est calcul&eacute;e pour donn&eacute; un aspect pr&eacute;d&eacute;termin&eacute;.</p>
-<div class="image"><img src="entrepot/schema1.png" alt="Sch&eacute;ma1" width="689" height="246" />
-<div class="legende">Fonctionnement du plugin - de la l'aspect initial au r&eacute;sultat final</div></div>
-<p>Deux div sont ainsi ajout&eacute;es sur chaque ligne. L'une flotte à droite, l'autre à gauche. Une div suppl&eacute;mentaire est ajout&eacute; et comporte l'attribut css clear:both afin de permettre d'&eacute;crire la ligne suivante. Le texte est quand à lui inclus dans une div diff&eacute;rente, il est c&eacute;sur&eacute; de mani&egrave;re basique (voir l'expliquation sur les c&eacute;sures), et r&eacute;gl&eacute; avec un margin-top n&eacute;gatif de la taille de la div initial (ou du param&egrave;tre height, si celui-ci est pass&eacute; à la fonction).</p>
-<h2>Disponibilit&eacute;s</h2>
-<p>Ce plugin est diponibles pour les frameworks <a href="http://plugins.jquery.com/project/textmorph">jquery</a> et <a href="http://mootools.net/forge/p/fx_textmorph">mootools</a>. Les démos sont présentes pour <a href="demos/jquery.html" target="_blank">jquery</a> et pour <a target="_blank" href="demos/mootools.html">mootools</a></p>
-<h2>Les C&eacute;sures</h2>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head>
 
-<p>Les c&eacute;sures sont r&eacute;alis&eacute;es par ce plugin de mani&egrave;re simpliste, elle sont d&eacute;sactivable avec le param&egrave;tre shy. L'int&eacute;rêt &eacute;tant d'ajouter un syst&egrave;me de c&eacute;sure plus puissant javascript ou php. En effet, outre le non suivi des r&egrave;gles de c&eacute;sure communn&eacute;ment admise, chaque langues ayant des r&egrave;gles diff&eacute;rentes qui peuvent s'av&eacute;rer complexes, la fonction r&eacute;alisant les c&eacute;sures oblit&egrave;re toutes les balises int&eacute;gr&eacute;es dans le texte à former.</p>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Textmorph</title>
+    	<link rel="stylesheet" href="ui/styles/styles.css" type="text/css" media="all">
+    </head><body><div id="page">
+<div class="bord gauche page"></div>
+<div class="bord droit page"></div>
+<div id="entete">
+<img id="freeculturalworks" src="ui/images/Free-cultural-works-approved.png" alt="Free Cultural Content">
+</div><div id="content">
+<div class="lang"><a href="en.html" title="English version"><span class="accessibilite">English version</span></a></div>
+<h1>TextMorph</h1>
+<h2>Présentation
+</h2>
+<p>TextMorph est un plugin disponible pour mootools ainsi que jquery
+qui permet de réaliser des formes avec un texte. Il se base sur les
+spécifications css en cours css 2.1 (disponible en version <a href="http://www.w3.org/TR/CSS21/">anglaise</a> et <a href="http://www.yoyodesign.org/doc/w3c/css2/cover.html">française</a>).</p>
+<h2>Principe</h2>
+<p>TextDraw s'appuie sur deux propriétés présente dans la normes css,
+le float et le margin-top, en les combinant de manière a faire
+apparaitre le texte au bord de multiples div dont la taille est
+calculée pour donné un aspect prédéterminé.</p>
+<div class="image"><img src="ui/images/schema1.png" alt="Schéma1" width="689" height="246">
+<div class="legende">Fonctionnement du plugin - de la l'aspect initial au résultat final</div></div>
+<p>Deux div sont ainsi ajoutées sur chaque ligne. L'une flotte à
+droite, l'autre à gauche. Une div supplémentaire est ajouté et comporte
+l'attribut css clear:both afin de permettre d'écrire la ligne suivante.
+Le texte est quand à lui inclus dans une div différente, il est césuré
+de manière basique (voir l'expliquation sur les césures), et réglé avec
+un margin-top négatif de la taille de la div initial (ou du paramètre
+height, si celui-ci est passé à la fonction).</p>
+<h2>Disponibilités</h2>
+<p>Ce plugin est diponibles pour les frameworks <a href="http://plugins.jquery.com/project/textmorph">jquery</a> (<a href="http://nicodmf.github.com/TextMorph/demos/jquery.html">démo</a>)et <a href="http://mootools.net/forge/p/fx_textmorph">mootools</a> (<a href="http://nicodmf.github.com/TextMorph/demos/mootools.html">démo</a>).</p>
+<h2>Les Césures</h2>
+<p>Les césures sont réalisées par ce plugin de manière simpliste, elle
+sont désactivable avec le paramètre shy. L'intérêt étant d'ajouter un
+système de césure plus puissant javascript ou php. En effet, outre le
+non suivi des règles de césure communnément admise, chaque langues
+ayant des règles différentes qui peuvent s'avérer complexes, la
+fonction réalisant les césures oblitère toutes les balises intégrées
+dans le texte à former.</p>
 <h3>exemple</h3>
-<pre class="javascript">
-new TextMorph(document.getElementById('circle2'),{
+<pre class="javascript">new TextMorph(document.getElementById('circle2'),{
 	shy:null
 });
 </pre>
+</div>
 <ul class="menu">
-<li id="menu1"  class="choice"><a href="?p=textmorph">TextMorph</a></li><li id="menu2"  class=""><a href="?p=textmorph"></a></li></ul>
-<div id="pied">
+<li id="menu1" class="choice"><a href="http://ndemarqu.perso.info.unicaen.fr/test/ndmfGitHub/controleur.php?p=textmorph">TextMorph</a></li><li id="menu2" class=""><a href="http://ndemarqu.perso.info.unicaen.fr/test/ndmfGitHub/controleur.php?p=textmorph"></a></li></ul>
+<div id="piedpage">
+<div class="frameworks boite"><span class="titre">Qualité</span>
+    <div class="logos"> <img src="ui/images/by-nc-sa.png" alt="Mootools" title="Mootools"> <img title="jQuery" alt="jQuery" src="ui/images/w3c_home_nb-v.png"> </div>
+</div>
+<div class="frameworks boite"><span class="titre">Compatibilités</span>
+    <div class="logos"><img src="ui/images/mootools.png" alt="Mootools" title="Mootools" width="184" height="46"><img src="ui/images/jquery2.png" alt="jQuery" title="jQuery" width="200" height="49"> </div>
+</div>
+<div class="linksicons boite"><span class="titre">Partage</span>
+	<a class="stumbleupon target" title="Share in StumbleUpon" href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fnicodmf.github.com%2FTextMorph%2Fen.html"><span class="accessibilite">StumbleUpon</span></a>
+    <a class="twitter target" title="Share in twitter" href="http://twitter.com/home?status=http%3A%2F%2Fnicodmf.github.com%2FTextMorph%2Fen.html"><span class="accessibilite">Twitter</span></a>
+    <a class="reddit target" title="Share in Reddit" href="http://www.reddit.com/submit?url=http%3A%2F%2Fnicodmf.github.com%2FTextMorph%2Fen.html"><span class="accessibilite">reddit</span></a>
+    <a class="digg target" title="Share in Digg" href="http://digg.com/submit?url=http%3A%2F%2Fnicodmf.github.com%2FTextMorph%2Fen.html&amp;title=TextMorph"><span class="accessibilite">Digg</span></a>
+    <a class="delicious target" title="Share in delicious" href="http://delicious.com/post/?url=http%3A%2F%2Fnicodmf.github.com%2FTextMorph%2Fen.html&amp;title=TextMorph"><span class="accessibilite">Del.icio.us</span></a>
+    <a class="google target" title="Share in google" href="http://www.google.com/bookmarks/mark?op=add&amp;bkmk=TextMorph&amp;title=TextMorph&amp;labels=,&amp;annotation=&amp;cd=bm&amp;btnA=Add"><span class="accessibilite">Google</span></a></div>
+<div class="copyright">Réalisé par Nicolas de Marqué Fromentin</div>
 </div>
 </div>
-</body>
-</html>
+</body></html>

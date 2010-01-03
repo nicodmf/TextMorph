@@ -3,16 +3,16 @@
 body{background:white  url(../images/bknd.jpg) top repeat-x; font-family:Verdana, Arial, Helvetica, sans-serif; border:0px; padding:0px; margin:0; }
 
 h1, h2, h3{font-family:Georgia, "Times New Roman", Times, serif; }
-h1{width: 200px; margin:auto; font-size:36px; text-align:center; margin-top:0; padding:0;padding-top:60px; position:relative; color:#003300}
-h1 .ombre{padding-top:60px;position:absolute; top:1px; left:1px; color:#333333}
-h1 .text.ombre{padding-top:60px;position:absolute; top:0px; left:0px; color:#003300}
+h1{display:none;}
+.ombre{padding-top:60px;position:absolute; top:1px; left:1px; color:#333333}
+.text.ombre{padding-top:60px;position:absolute; top:0px; left:0px; color:#003300}
 h2{background: url(../images/h1-background.png)}
 p{padding-left:10px; font-size:smaller; }
 #entete{height:170px; background: url(../images/fond.png) #006600;}
 #entete #freeculturalworks{float:right; margin-top:10px; }
 .menu{display:none}
 .accessibilite{display:none;}
-.page{position:relative; background:url(../images/blanctransparent.png); width:750px; margin:auto; }
+#page{position:relative; background:url(../images/blanctransparent.png); width:750px; margin:auto; }
 .lang{
 	float:right;
 	width:60px;
@@ -25,8 +25,8 @@ p{padding-left:10px; font-size:smaller; }
 .lang a {width:100%; height:100%; display:block}
 div.image{text-align:center;}
 .legende{font-style:italic}
-.bord.page.gauche{position:absolute; left:-4px; top:0px; width:4px; height:100%; background: url(../images/cotegauche.png) repeat-y }
-.bord.page.droit{position:absolute; right:-4px; top:0px; width:4px; height:100%; background: url(../images/cotedroit.png) repeat-y }
+.bord.page.gauche{position:absolute; left:-4px; top:0px; width:4px; height:100%; background: url(../images/cotegauche.png) repeat-y  }
+.bord.page.droit{position:absolute; right:-4px; top:0px; width:4px; height:100%; background: url(../images/cotedroit.png) repeat-y  }
 #content{padding:20px; position:relative;}
 #piedpage{height:270px; width:750px; background-color:#CCCCCC; left:0px;}
 #piedpage .titre {
@@ -37,7 +37,7 @@ div.image{text-align:center;}
 	display: block;
 	margin-top: -10px;
 }
-.page #piedpage .boite {
+#page #piedpage .boite {
 	margin: 20px;
 	border-right: thin dotted #999999;
 	width: 250px;
@@ -49,7 +49,7 @@ div.image{text-align:center;}
 	float: left;
 }
 #piedpage .logos{ text-align:right;}
-.page #piedpage .linksicons{
+#page #piedpage .linksicons{
 	width:120px;
 	right:0px;
 	float:left;
