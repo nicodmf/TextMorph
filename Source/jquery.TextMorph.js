@@ -61,6 +61,8 @@ var TextMorph = function(element, options){
 		this.changeOrigin();
 		this.placeContent();
 		this.drawForm();
+		//For chrome compatibility
+		this.firstChild.previousSibling.parentNode.removeChild(this.firstChild.previousSibling)
 	}
 	this.changeOrigin = function() {
 		$(this.element).css({'width': this.width + 'px'});
