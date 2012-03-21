@@ -62,7 +62,7 @@ var TextMorph = function(element, options){
 		this.placeContent();
 		this.drawForm();
 		//For chrome compatibility
-		this.firstChild.previousSibling.parentNode.removeChild(this.firstChild.previousSibling)
+		this.firstChild[0].previousSibling.parentNode.removeChild(this.firstChild[0].previousSibling)
 	}
 	this.changeOrigin = function() {
 		$(this.element).css({'width': this.width + 'px'});
@@ -77,7 +77,7 @@ var TextMorph = function(element, options){
 			'clear' : 'both'
 		}).addClass("floatie");
 		var div = $("<div></div>").css( {
-			'margin-top':'-' + this.height + 'px'
+			'margin-top':'-' + (this.height-this.lineHeight) + 'px'
 		}).addClass("content");
 		while (this.element.hasChildNodes()) {
 			$(div).append(this.element.removeChild(this.element.firstChild));
